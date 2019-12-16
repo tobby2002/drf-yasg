@@ -213,9 +213,9 @@ nitpick_ignore = [
 # for some reason needs the sources dir to be in the path in order for viewcode to work
 sys.path.insert(0, os.path.abspath('../src'))
 
-# activate the Django testproj to be able to succesfully import drf_yasg
-sys.path.insert(0, os.path.abspath('../testproj'))
-os.putenv('DJANGO_SETTINGS_MODULE', 'testproj.settings.local')
+# activate the Django buyairest to be able to succesfully import drf_yasg
+sys.path.insert(0, os.path.abspath('../buyairest'))
+os.putenv('DJANGO_SETTINGS_MODULE', 'buyairest.settings.local')
 
 from django.conf import settings  # noqa: E402
 

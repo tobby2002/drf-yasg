@@ -3,7 +3,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from django.urls import reverse_lazy
 
-from testproj.util import static_lazy
+from appapi.util import static_lazy
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -47,12 +47,12 @@ MIDDLEWARE = [
     'drf_yasg.middleware.SwaggerExceptionMiddleware',
 ]
 
-ROOT_URLCONF = 'testproj.urls'
+ROOT_URLCONF = 'appapi.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'testproj', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'appapi', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,7 +65,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'testproj.wsgi.application'
+WSGI_APPLICATION = 'buyairest.wsgi.application'
 
 LOGIN_URL = reverse_lazy('admin:login')
 
@@ -109,7 +109,7 @@ SWAGGER_SETTINGS = {
     'REFETCH_SCHEMA_WITH_AUTH': True,
     'REFETCH_SCHEMA_ON_LOGOUT': True,
 
-    'DEFAULT_INFO': 'testproj.urls.swagger_info',
+    'DEFAULT_INFO': 'buyairest.urls.swagger_info',
 
     'SECURITY_DEFINITIONS': {
         'Basic': {
@@ -142,7 +142,7 @@ SWAGGER_SETTINGS = {
         'appName': OAUTH2_APP_NAME,
     },
     "DEFAULT_PAGINATOR_INSPECTORS": [
-        'testproj.inspectors.UnknownPaginatorInspector',
+        'buyairest.inspectors.UnknownPaginatorInspector',
         'drf_yasg.inspectors.DjangoRestResponsePagination',
         'drf_yasg.inspectors.CoreAPICompatInspector',
     ]
@@ -163,11 +163,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'testproj', 'static'),
+    os.path.join(BASE_DIR, 'appapi', 'static'),
 ]
 
 # Testing
-TEST_RUNNER = 'testproj.runner.PytestTestRunner'
+TEST_RUNNER = 'appapi.runner.PytestTestRunner'
 
 # Logging configuration
 LOGGING = {

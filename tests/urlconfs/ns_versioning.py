@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 from rest_framework import versioning
 
-from testproj.urls import SchemaView, required_urlpatterns
+from appapi.urls import SchemaView, required_urlpatterns
 
 from . import ns_version1, ns_version2
 

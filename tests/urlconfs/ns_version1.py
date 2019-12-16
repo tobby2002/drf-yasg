@@ -3,7 +3,7 @@ from rest_framework import generics, versioning
 
 from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
-from testproj.urls import required_urlpatterns
+from appapi.urls import required_urlpatterns
 
 
 class SnippetList(generics.ListCreateAPIView):

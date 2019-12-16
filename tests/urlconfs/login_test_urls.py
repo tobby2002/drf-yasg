@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from testproj.urls import required_urlpatterns
+from appapi.urls import required_urlpatterns
 
 
 def dummy(request):
