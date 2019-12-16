@@ -26,9 +26,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'oauth2_provider',
     'corsheaders',
-
     'drf_yasg',
     'snippets',
+
     'users',
     'articles',
     'todo',
