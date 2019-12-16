@@ -65,7 +65,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'buyairest.wsgi.application'
+WSGI_APPLICATION = 'appapi.wsgi.application'
 
 LOGIN_URL = reverse_lazy('admin:login')
 
@@ -109,7 +109,7 @@ SWAGGER_SETTINGS = {
     'REFETCH_SCHEMA_WITH_AUTH': True,
     'REFETCH_SCHEMA_ON_LOGOUT': True,
 
-    'DEFAULT_INFO': 'buyairest.urls.swagger_info',
+    'DEFAULT_INFO': 'appapi.urls.swagger_info',
 
     'SECURITY_DEFINITIONS': {
         'Basic': {
@@ -142,7 +142,7 @@ SWAGGER_SETTINGS = {
         'appName': OAUTH2_APP_NAME,
     },
     "DEFAULT_PAGINATOR_INSPECTORS": [
-        'buyairest.inspectors.UnknownPaginatorInspector',
+        'appapi.inspectors.UnknownPaginatorInspector',
         'drf_yasg.inspectors.DjangoRestResponsePagination',
         'drf_yasg.inspectors.CoreAPICompatInspector',
     ]

@@ -9,7 +9,7 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 
 swagger_info = openapi.Info(
-    title="Snippets API",
+    title="Buyai Snippets API",
     default_version='v1',
     description="""This is a demo project for the [drf-yasg](https://github.com/axnsan12/drf-yasg) Django Rest Framework library.
 
@@ -66,9 +66,9 @@ urlpatterns = [
     url(r'^$', root_redirect),
 
     url(r'^snippets/', include('snippets.urls')),
-    url(r'^articles/', include('articles.urls')),
-    url(r'^users/', include('users.urls')),
-    url(r'^todo/', include('todo.urls')),
+    # url(r'^articles/', include('articles.urls')),
+    # url(r'^users/', include('users.urls')),
+    # url(r'^todo/', include('todo.urls')),
     url(r'^people/', include('people.urls')),
     url(r'^plain/', plain_view),
 ] + required_urlpatterns

@@ -86,6 +86,15 @@ Usage
 
 0. Installation
 ===============
+on mac
+git clone appapi
+pip install -r ./requirements/base.txt
+pip install -r ./requirements/testproj.txt
+pip install -U django-oauth-toolkit
+pip install django-cors-headers
+pip install -U drf-yasg[validation]
+python manage.py runserver
+
 
 The preferred instalation method is directly from pypi:
 
